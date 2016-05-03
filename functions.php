@@ -48,3 +48,141 @@ wp_enqueue_style('font2Css');
 
 add_action( 'wp_enqueue_scripts', 'adding_scripts' );
 add_action( 'wp_enqueue_scripts', 'adding_styles' );
+
+
+/*
+
+CUSTOM POST TYPES
+
+*/
+
+
+add_action( 'init', 'codex_dog_init' );
+/**
+ * Register a dog post type.
+ *
+ * @link http://codex.wordpress.org/Function_Reference/register_post_type
+ */
+function codex_dog_init() {
+	$labels = array(
+		'name'               => _x( 'Dogs', 'post type general name', 'your-plugin-textdomain' ),
+		'singular_name'      => _x( 'Dog', 'post type singular name', 'your-plugin-textdomain' ),
+		'menu_name'          => _x( 'Dogs', 'admin menu', 'your-plugin-textdomain' ),
+		'name_admin_bar'     => _x( 'Dogs', 'add new on admin bar', 'your-plugin-textdomain' ),
+		'add_new'            => _x( 'Add New', 'dog', 'your-plugin-textdomain' ),
+		'add_new_item'       => __( 'Add New Dog', 'your-plugin-textdomain' ),
+		'new_item'           => __( 'New Dogs', 'your-plugin-textdomain' ),
+		'edit_item'          => __( 'Edit Dog', 'your-plugin-textdomain' ),
+		'view_item'          => __( 'View Dogs', 'your-plugin-textdomain' ),
+		'all_items'          => __( 'All Dogs', 'your-plugin-textdomain' ),
+		'search_items'       => __( 'Search Dogs', 'your-plugin-textdomain' ),
+		'parent_item_colon'  => __( 'Parent Dogs:', 'your-plugin-textdomain' ),
+		'not_found'          => __( 'No Dogs found.', 'your-plugin-textdomain' ),
+		'not_found_in_trash' => __( 'No Dogs found in Trash.', 'your-plugin-textdomain' )
+	);
+
+	$args = array(
+		'labels'             => $labels,
+        'description'        => __( 'Description.', 'your-plugin-textdomain' ),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'dog' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+	);
+
+	register_post_type( 'dog', $args );
+}
+
+add_action( 'init', 'codex_service_init' );
+/**
+ * Register a services post type.
+ *
+ * @link http://codex.wordpress.org/Function_Reference/register_post_type
+ */
+function codex_service_init() {
+	$labels = array(
+		'name'               => _x( 'Services', 'post type general name', 'your-plugin-textdomain' ),
+		'singular_name'      => _x( 'Service', 'post type singular name', 'your-plugin-textdomain' ),
+		'menu_name'          => _x( 'Services', 'admin menu', 'your-plugin-textdomain' ),
+		'name_admin_bar'     => _x( 'Services', 'add new on admin bar', 'your-plugin-textdomain' ),
+		'add_new'            => _x( 'Add New', 'services', 'your-plugin-textdomain' ),
+		'add_new_item'       => __( 'Add New Service', 'your-plugin-textdomain' ),
+		'new_item'           => __( 'New Service', 'your-plugin-textdomain' ),
+		'edit_item'          => __( 'Edit Service', 'your-plugin-textdomain' ),
+		'view_item'          => __( 'View Service', 'your-plugin-textdomain' ),
+		'all_items'          => __( 'All Services', 'your-plugin-textdomain' ),
+		'search_items'       => __( 'Search Service', 'your-plugin-textdomain' ),
+		'parent_item_colon'  => __( 'Parent Service:', 'your-plugin-textdomain' ),
+		'not_found'          => __( 'No Service found.', 'your-plugin-textdomain' ),
+		'not_found_in_trash' => __( 'No Service found in Trash.', 'your-plugin-textdomain' )
+	);
+
+	$args = array(
+		'labels'             => $labels,
+        'description'        => __( 'Description.', 'your-plugin-textdomain' ),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'service' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+	);
+
+	register_post_type( 'service', $args );
+}
+
+
+add_action( 'init', 'codex_booking_init' );
+/**
+ * Register a services post type.
+ *
+ * @link http://codex.wordpress.org/Function_Reference/register_post_type
+ */
+function codex_booking_init() {
+	$labels = array(
+		'name'               => _x( 'Bookings', 'post type general name', 'your-plugin-textdomain' ),
+		'singular_name'      => _x( 'Booking', 'post type singular name', 'your-plugin-textdomain' ),
+		'menu_name'          => _x( 'Bookings', 'admin menu', 'your-plugin-textdomain' ),
+		'name_admin_bar'     => _x( 'Bookings', 'add new on admin bar', 'your-plugin-textdomain' ),
+		'add_new'            => _x( 'Add New', 'booking', 'your-plugin-textdomain' ),
+		'add_new_item'       => __( 'Add New Booking', 'your-plugin-textdomain' ),
+		'new_item'           => __( 'New Bookings', 'your-plugin-textdomain' ),
+		'edit_item'          => __( 'Edit Bookings', 'your-plugin-textdomain' ),
+		'view_item'          => __( 'View Bookings', 'your-plugin-textdomain' ),
+		'all_items'          => __( 'All Bookings', 'your-plugin-textdomain' ),
+		'search_items'       => __( 'Search Bookings', 'your-plugin-textdomain' ),
+		'parent_item_colon'  => __( 'Parent Booking:', 'your-plugin-textdomain' ),
+		'not_found'          => __( 'No Bookings found.', 'your-plugin-textdomain' ),
+		'not_found_in_trash' => __( 'No Bookings found in Trash.', 'your-plugin-textdomain' )
+	);
+
+	$args = array(
+		'labels'             => $labels,
+        'description'        => __( 'Description.', 'your-plugin-textdomain' ),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'booking' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+	);
+
+	register_post_type( 'booking', $args );
+}
