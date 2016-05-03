@@ -11,13 +11,12 @@
 
   <title> <?php wp_title(); ?> </title>
 
-
  <?php wp_head(); ?>
 
 
 </head>
 
-<body id="page-top" class="index">
+<body <?php body_class(); ?>  id="page-top" class="index">
 
   <!-- Navigation -->
   <nav class="navbar navbar-default navbar-fixed-top">

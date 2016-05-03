@@ -4,14 +4,14 @@
     <div  class="container">
       <div class="row">
         <div class="col-lg-12">
-          <img  class="img-responsive" src="img/logoDogSaveTheQueen.png" alt="Dog Save The Queen Logo">
+          <img  class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/logoDogSaveTheQueen.png" alt="Dog Save The Queen Logo">
           <div class="intro-text">
         
               <span class="name" >Get a Bath! </span>
             
             <div class="row" > 
               <div  class="col-lg-12">
-                <img  class="img-responsive" src="img/bones.png">
+                <img  class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/bones.png">
               </div> 
             </div>
             <span class="skills">Breed based services - Professional tools - Because we love dogs</span>
@@ -35,7 +35,7 @@
           <div class="row">
             <div class="col-sm-4 col-md-4">
               <div class="thumbnail">
-                <img src="img/img1.jpg" alt="Hair Removal" class="img-circle" >
+                <img src="<?php bloginfo('template_url'); ?>/img/img1.jpg" alt="Hair Removal" class="img-circle" >
                 <div class="caption">
                   <h3>Hair cutting</h3>
                   <p>The coats of many breeds require trimming, cutting... </p>
@@ -45,7 +45,7 @@
             </div>
             <div class="col-sm-4 col-md-4">
               <div class="thumbnail">
-                <img src="img/img2.jpg" alt="Bathing" class="img-circle" >
+                <img src="<?php bloginfo('template_url'); ?>/img/img2.jpg" alt="Bathing" class="img-circle" >
                 <div class="caption">
                   <h3>Grooming Plan</h3>
                   <p>Total grooming programme.<br> Get the look!</p>
@@ -55,7 +55,7 @@
             </div>
             <div class="col-sm-4 col-md-4">
               <div class="thumbnail">
-                <img src="img/img3.jpg" alt="Nail trimming" class="img-circle" >
+                <img src="<?php bloginfo('template_url'); ?>/img/img3.jpg" alt="Nail trimming" class="img-circle" >
                 <div class="caption">
                   <h3>Nail Clipping</h3>
                   <p>Nail clipping is essential in order to have an healthy dog.</p>
@@ -78,7 +78,7 @@
            <div class="row">
                 <div  class="col-md-12 text-center" >
                   <h2  > About Dog Save The Queen </h2>
-                  <center><img  class="img-responsive" src="img/bones.png"></center>
+                  <center><img  class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/bones.png"></center>
                   <br>
                 </div>
            </div>  
@@ -131,14 +131,14 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                           <div class="item active">
-                            <img src="img/pet1.jpg" alt="dog foto">
+                            <img src="<?php bloginfo('template_url'); ?>/img/pet1.jpg" alt="dog foto">
           
                           </div>
                           <div class="item">
-                             <img src="img/pet2.jpg" alt="dog foto">
+                             <img src="<?php bloginfo('template_url'); ?>/img/pet2.jpg" alt="dog foto">
                           </div>
                               <div class="item">
-                             <img src="img/pet3.jpg" alt="dog foto">
+                             <img src="<?php bloginfo('template_url'); ?>/img/pet3.jpg" alt="dog foto">
                           </div>
                         </div>
 
@@ -168,7 +168,7 @@
                 <br>
               </div> 
             </div>     
-             <center><img  class="img-responsive" src="img/bonesDark.png"></center>
+             <center><img  class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/bonesDark.png"></center>
             <br>
             <div class="row" id="contatto" >
               <div class="col-lg-4 col-md-4 col-sm-4 text-center "  >
@@ -187,7 +187,7 @@
               </div> 
 
               <div class="col-lg-4 col-md-4 col-sm-4 text-center ">
-                <img  class="img-circle" src="img/contactPicture.jpg">
+                <img  class="img-circle" src="<?php bloginfo('template_url'); ?>/img/contactPicture.jpg">
               </div> 
               
             </div>

@@ -57,11 +57,11 @@
                     <h2>Services</h2>
                     <div class="row" > 
                       <div class="col-lg-12">
-                        <img  class="img-responsive" src="img/bonesDark.png">
+                        <img  class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/bonesDark.png">
                       </div> 
                     </div>
                     <center>
-                      <img src="img/imgServices.jpg" alt="Dog Service" class="img-responsive" >
+                      <img src="<?php bloginfo('template_url'); ?>/img/imgServices.jpg" alt="Dog Service" class="img-responsive" >
                     </center>
 
                     <h3>Working methods</h3>
@@ -75,7 +75,7 @@
 
                     <h3>Products</h3>
                     <center>
-                      <img src="img/diamex2.jpg" alt="produit Diamex" class="img-responsive"  >
+                      <img src="<?php bloginfo('template_url'); ?>/img/diamex2.jpg" alt="produit Diamex" class="img-responsive"  >
                     </center>
 
                     <p>
