@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+  <meta name="description" content="Dog Save the Queen - Best dog grooming in Brussels Belgium - Dog Save the Queen provides a professional grooming services tailored to you and your pets requirement">
   <meta name="author" content="Marco Todaro">
 
   <title> <?php wp_title(); ?> </title>
@@ -46,12 +46,6 @@
           </li>
           <li class="page-scroll">
             <a href="#contact">Contact</a>
-          </li>
-          <li>
-            <a href="#contact">Login</a>
-          </li>
-          <li>
-            <a href="#contact">Sign Up</a>
           </li>
         </ul>
       </div>

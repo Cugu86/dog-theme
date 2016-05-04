@@ -186,3 +186,75 @@ function codex_booking_init() {
 
 	register_post_type( 'booking', $args );
 }
+
+
+/*********************************************************************************
+
+CUSTOM TAXONOMIES
+
+ *********************************************************************************/
+
+
+// hook into the init action and call create_book_taxonomies when it fires
+add_action( 'init', 'create_dog_taxonomies', 0 );
+
+// create two taxonomies, genres and writers for the post type "book"
+function create_dog_taxonomies() {
+	// Add new taxonomy, make it hierarchical (like categories)
+	$labels = array(
+		'name'              => _x( 'Breeds', 'taxonomy general name' ),
+		'singular_name'     => _x( 'Breed', 'taxonomy singular name' ),
+		'search_items'      => __( 'Search breeds' ),
+		'all_items'         => __( 'All Breeds' ),
+		'parent_item'       => __( 'Parent Breed' ),
+		'parent_item_colon' => __( 'Parent Breed:' ),
+		'edit_item'         => __( 'Edit Breed' ),
+		'update_item'       => __( 'Update Breed' ),
+		'add_new_item'      => __( 'Add New Breed' ),
+		'new_item_name'     => __( 'New Breed Name' ),
+		'menu_name'         => __( 'Breed' ),
+	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'breed' ),
+	);
+
+	register_taxonomy( 'breed', array( 'dog' ), $args );
+
+	// Add new taxonomy, NOT hierarchical (like tags)
+	$labels = array(
+		'name'                       => _x( 'Sizes', 'taxonomy general name' ),
+		'singular_name'              => _x( 'Size', 'taxonomy singular name' ),
+		'search_items'               => __( 'Search Sizes' ),
+		'popular_items'              => __( 'Popular Size' ),
+		'all_items'                  => __( 'All Size' ),
+		'parent_item'                => null,
+		'parent_item_colon'          => null,
+		'edit_item'                  => __( 'Edit Size' ),
+		'update_item'                => __( 'Update Size' ),
+		'add_new_item'               => __( 'Add New Size' ),
+		'new_item_name'              => __( 'New Size Name' ),
+		'separate_items_with_commas' => __( 'Separate size with commas' ),
+		'add_or_remove_items'        => __( 'Add or remove size' ),
+		'choose_from_most_used'      => __( 'Choose from the most used size' ),
+		'not_found'                  => __( 'No size found.' ),
+		'menu_name'                  => __( 'Size' ),
+	);
+
+	$args = array(
+		'hierarchical'          => false,
+		'labels'                => $labels,
+		'show_ui'               => true,
+		'show_admin_column'     => true,
+		'update_count_callback' => '_update_post_term_count',
+		'query_var'             => true,
+		'rewrite'               => array( 'slug' => 'size' ),
+	);
+
+	register_taxonomy( 'size', 'dog', $args );
+}
